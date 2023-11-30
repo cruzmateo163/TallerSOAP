@@ -11,24 +11,23 @@ Este proyecto utiliza Spring Boot para configurar un servicio web SOAP simple. P
 - Java 8 o superior
 - Maven o Gradle
 
-## Configuración del Proyecto
+# Uso del Servicio Web SOAP
 
-### Configuración de Maven (pom.xml)
+El servicio web SOAP proporcionado por esta aplicación está disponible en http://localhost:8080/ws. A continuación, se detallan las instrucciones sobre cómo probar y utilizar este servicio.
 
-Asegúrate de tener las siguientes dependencias en tu archivo `pom.xml`:
+## Herramientas de Prueba
 
-```xml
-<!-- Para Maven -->
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web-services</artifactId>
-    </dependency>
-    <!-- Otras dependencias -->
-</dependencies>
+Puedes utilizar varias herramientas para probar el servicio web SOAP, entre las cuales se incluyen:
 
- ## Uso del Servicio Web SOAP
-El servicio web está disponible en http://localhost:8080/ws. Puedes probar el servicio utilizando herramientas como SoapUI o curl.
+1. **SoapUI:** Una herramienta de prueba de servicios web muy popular.
+
+2. **curl:** Una herramienta de línea de comandos para realizar solicitudes HTTP.
+
+## Ejemplo de Solicitud con curl
+
+Aquí hay un ejemplo de cómo realizar una solicitud al servicio web utilizando curl:
+
+```bash
 curl -X POST \
   http://localhost:8080/ws \
   -H 'Content-Type: text/xml' \
@@ -41,3 +40,7 @@ curl -X POST \
       </web:getCountryRequest>
    </soapenv:Body>
 </soapenv:Envelope>'
+
+
+
+ 
